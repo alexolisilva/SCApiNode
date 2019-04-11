@@ -7,9 +7,9 @@ routers.post("/",controllers.autenticar);
 
 routers.get("/", controllers.listarUsuarios);
 routers.get("/:id", controllers.buscarUmUsuario);
-routers.post("/", controllers.criarUsuario);
-routers.delete("/:id",autorizar.autorizar, controllers.excluirUsuario);
-routers.put("/:id", controllers.atualizarUsuario);
+routers.post("/",autorizar.autorizar, controllers.criarUsuario);
+routers.delete("/:id", autorizar.autorizar, controllers.excluirUsuario);
+routers.put("/:id", autorizar.autorizar, controllers.atualizarUsuario);
 
 
 module.exports = routers;
