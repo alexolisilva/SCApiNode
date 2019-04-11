@@ -56,16 +56,6 @@ exports.criarUsuario = (req,res,next)=>{
         next(erro);
     });
 };
-/*
-exports.criarAutor = (req,res,next)=>{
-    let autor = req.body;
-    Autor.create(autor).then((novoAutor)=>{
-        res.status(Status.CREATED).send();
-    }).catch((erro)=>{
-        next(erro);
-    });
-};
-*/
 
 exports.excluirUsuario = (req,res,next) => {
     let id = parseInt(req.params.id);
